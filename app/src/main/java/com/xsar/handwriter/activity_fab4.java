@@ -42,22 +42,19 @@ import java.util.Locale;
 
 public class activity_fab4 extends AppCompatActivity {
 
-    private static final String FILE_NAME = "sample.txt";
+    private static final int READ_REQUEST_CODE = 42;
+    private static final int RESULT_SPEECH = 420;
+    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2;
+    boolean saving = false ;
+    private InterstitialAd mInterstitialAd;
+    int FileReady;
     EditText editText, filename;
     Button filenameok, filenamecancel;
     View renameBg;
-    String mText, textFile, eTuNString;
-    String fileName;
-    File file,dir;
+    String mText, textFile, eTuNString, fileName;
     LinearLayout renamelayout, saveButton, nextButton;
-    boolean saving = false;
-    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2;
-
-    int FileReady;
-    private static final int READ_REQUEST_CODE = 42;
-    private static final int RESULT_SPEECH = 420;
     ImageButton speechButton;
-    private InterstitialAd mInterstitialAd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +79,6 @@ public class activity_fab4 extends AppCompatActivity {
         renameBg = findViewById(R.id.renameBackground);
         speechButton = findViewById(R.id.speechButton);
 
-        //setfabui();
         renameUI();
 
         fadeIn2 = AnimationUtils.loadAnimation(activity_fab4.this, R.anim.fadein_slow);
@@ -277,19 +273,6 @@ public class activity_fab4 extends AppCompatActivity {
         }
 
     }
-/*
-    private void setfabui(){
-        Display display = getWindowManager().getDefaultDisplay();
-        int Swidth = display.getWidth();
-
-        LinearLayout.MarginLayoutParams renameParams = (LinearLayout.MarginLayoutParams) renamelayout.getLayoutParams();
-        renameParams.width = (Swidth*90)/100;
-        renameParams.height = (Swidth*30)/100;
-        renameParams.setMargins(100,0,100,0);
-        renamelayout.setLayoutParams(renameParams);
-    }
-
- */
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -304,7 +287,6 @@ public class activity_fab4 extends AppCompatActivity {
             }
         }
     }
-
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void saveToTextFile() {
@@ -339,10 +321,7 @@ public class activity_fab4 extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
 
     private void saveFunction() {
         saveButton.setOnClickListener(new View.OnClickListener() {

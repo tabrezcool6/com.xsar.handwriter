@@ -36,6 +36,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.res.ResourcesCompat;
 
 import java.io.File;
@@ -63,6 +64,7 @@ public class activity_next extends AppCompatActivity {
     ImageView pickImage, selected, selected2, unselected, selected21, selected22, selected31, selected33;
     private Animation fromBottom, toBottom, captureanim;
     LinearLayout linearLayout, exportButton, linesLinearLayout, addBGFromGallery;
+    ConstraintLayout drawLine ;
     HorizontalScrollView scrollView, textColorScrollView;
     public boolean retake = false, bgImageScroller = false, fontStyleSelector = false, colorSelector = false, capturedImage = false,
             drawMargin = false, linesSelector = false, drawLines = false, drawSideMargin = false, drawlinesboolean=false;;
@@ -114,6 +116,7 @@ public class activity_next extends AppCompatActivity {
         sideMarginButton = (Button) findViewById(R.id.marginButton2);
         DrawLinesButton = (Button) findViewById(R.id.lineButton);
 
+        drawLine = findViewById(R.id.drawLineButton);
         selected = (ImageView) findViewById(R.id.circle_selected);
         selected2 = (ImageView) findViewById(R.id.circle_selected2);
         unselected = (ImageView) findViewById(R.id.circle_unselected);
@@ -607,7 +610,7 @@ public class activity_next extends AppCompatActivity {
                 }
             });
 
-        DrawLinesButton.setOnClickListener(new View.OnClickListener() {
+        drawLine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (drawlinesboolean){

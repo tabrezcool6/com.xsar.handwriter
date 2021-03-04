@@ -33,23 +33,19 @@ import java.util.ArrayList;
 
 public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    public ArrayList<String> filenames;
-    public ArrayList<String> filepaths;
-    public ArrayList<Long> filedate;
-    public ArrayList<Long> fileSize;
+    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2, fromRight,toRight ;
+    public ArrayList<String> filenames, filepaths ;
+    public ArrayList<Long> filedate, fileSize;
     public ArrayList<File> filesfolder;
     public File renamefrom;
     public int renameSelected,deleteSelected;
+    boolean savingText = false;
     ListView text_files_list;
     SwipeRefreshLayout swipeRefreshLayout;
-
     LinearLayout renamelayoutText,deleteLayout;
     Button renameokText, filenamecancelText, deleteOk, deleteCancel;
     View renameBgText, deleteBgText;
     EditText fileNameText;
-    boolean savingText = false;
-    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2, fromRight,toRight ;
-    String fileName;
     String filePath;
 
     @Override
@@ -104,7 +100,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
                 filesfolder.add(f);
             }
         }
-
 
         final customAdapter customAdap = new customAdapter();
         text_files_list.setAdapter(customAdap);
@@ -211,33 +206,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
         });
 
     }
-/*
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.search_menu, menu);
-        MenuItem item = menu.findItem(R.id.search_menu);
-        SearchView view = (SearchView) item.getActionView();
-        view.setQueryHint("Type here to search");
-        view.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-
-                return false;
-            }
-        });
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
- */
-
 
     class customAdapter extends BaseAdapter {
 
@@ -294,16 +262,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
             }
             text_file_size.setText( size + unit);
 
-
-/*
-            for (Long k : fileSize)
-                if (k<1024){
-                    text_file_size.setText(fileSize.get(i) + " KB");
-                } else {
-                    text_file_size.setText(fileSize.get(i) + " MB");
-                }
- */
-
             text_file_but.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -314,20 +272,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
 
                 }
             });
-/*
-            text_file_but.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View view) {
-                    if (actionMode != null) {
-                        return false;
-                    }
-                    actionMode = startSupportActionMode(actionModeCallBack);
-                    view.setSelected(true);
-                    return true;
-                }
-            });
-
- */
 
             showMenuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -453,8 +397,10 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
                 public void onClick(View view) {
                     Intent sendIntent = new Intent();
                     sendIntent.setAction(Intent.ACTION_SEND);
-                    sendIntent.putExtra(android.content.Intent.EXTRA_STREAM, Uri.parse(filesfolder.get(i).getAbsolutePath()));
-                    //sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+filePath + "/" + filenames.get(i)));
+                    sendIntent.putExtra(android.content.Intent.EXTRA_STREAM, Uri.parse(filesfolder
+                            .get(i).getAbsolutePath()));
+                    //sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+filePath + "/" +
+                    // filenames.get(i)));
                     sendIntent.setType("text/*");
 
                     Intent shareIntent = Intent.createChooser(sendIntent, null);
@@ -488,59 +434,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
 
             return view;
         }
-
-
-
-/*
-        private ActionMode.Callback actionModeCallBack = new ActionMode.Callback() {
-            @Override
-            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                mode.getMenuInflater().inflate(R.menu.top_menu, menu);
-                mode.setTitle("Choose your option");
-                return true;
-            }
-
-            @Override
-            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-                return false;
-            }
-
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.rename:
-                        renameMethod();
-                        return true;
-
-                    case R.id.delete:
-                        //text_files_list.remove();
-
-                    default:
-                        return false;
-
-                }
-
-            }
-/*
-
-            @Override
-            public void onDestroyActionMode(ActionMode mode) {
-                actionMode = null;
-            }
-*/
-/*
-           public void bindView (final View view, final Context context, final Cursor cursor){
-               int pos = cursor.getPosition();
-               boolean selected = ((Activity_Folder_Text)context).text_files_list.isItemChecked(pos);
-               if (!selected) {
-                   view.setBackgroundResource(R.drawable.color_state_list);
-               } else {
-                   view.setBackgroundResource(R.drawable.color);
-               }
-           }
-
-           */
-
     };
 
 
@@ -557,14 +450,6 @@ public class Activity_Folder_Text extends AppCompatActivity implements PopupMenu
         LinearLayout.MarginLayoutParams deleteparams = (LinearLayout.MarginLayoutParams) deleteLayout.getLayoutParams();
         deleteparams.width = (screenWidth*70)/100;
         deleteLayout.setLayoutParams(deleteparams);
-    }
-
-
-    public void showMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(this, v);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.dropdown_options);
-        popupMenu.show();
     }
 
     @Override

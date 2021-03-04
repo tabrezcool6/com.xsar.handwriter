@@ -63,8 +63,6 @@ public class WalkThroughActivity extends AppCompatActivity {
         video = findViewById(R.id.videoView);
         view = findViewById(R.id.walkThrough);
         getStarted = findViewById(R.id.walkThrough_text);
-        clickHere = findViewById(R.id.click_here);
-        toOpenMenu = findViewById(R.id.to_Open_Menu);
         cardViewWalkthrough = findViewById(R.id.cardViewWalkthrough);
         skipButt = findViewById(R.id.skipButton);
 
@@ -73,18 +71,6 @@ public class WalkThroughActivity extends AppCompatActivity {
         arrow3 = findViewById(R.id.indicator_arrow3);
         arrow4 = findViewById(R.id.indicator_arrow4);
         arrow5 = findViewById(R.id.indicator_arrow5);
-
-        tv1 = (TextView) findViewById(R.id.click_here);
-        tv2 = (TextView) findViewById(R.id.click_here2);
-        tv3 = (TextView) findViewById(R.id.click_here3);
-        tv4 = (TextView) findViewById(R.id.click_here4);
-        tv5 = (TextView) findViewById(R.id.click_here5);
-
-        stv1 = (TextView) findViewById(R.id.to_Open_Menu);
-        stv2 = (TextView) findViewById(R.id.to_Open_Menu2);
-        stv3 = (TextView) findViewById(R.id.to_Open_Menu3);
-        stv4 = (TextView) findViewById(R.id.to_Open_Menu4);
-        stv5 = (TextView) findViewById(R.id.to_Open_Menu5);
 
         mfabtext2 = findViewById(R.id.fab_text2);
         mfabtext3 = findViewById(R.id.fab_text3);

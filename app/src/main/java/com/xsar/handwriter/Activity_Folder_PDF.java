@@ -32,23 +32,17 @@ import java.util.ArrayList;
 
 public class Activity_Folder_PDF extends AppCompatActivity{
 
-
-    public ArrayList<String> filenames;
-    public ArrayList<String> filepaths;
-    public ArrayList<Long> filedate;
-    public ArrayList<Long> fileSize;
-
+    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2, fromRight, toRight ;
+    public ArrayList<String> filenames, filepaths;
+    public ArrayList<Long> filedate, fileSize;
+    boolean savingPdf = false;
     public File renamefrom;
     public int renameSelected,deleteSelected;
     SwipeRefreshLayout swipeRefreshLayoutPdf;
-
     LinearLayout renamelayoutPdf,deleteLayoutPdf;
     Button renameokPdf, filenamecancelPdf, deleteOk, deleteCancel;
     View renameBgPdf, deleteBgPdf;
     EditText fileNamePdf;
-    boolean savingPdf = false;
-    private Animation fadeIn, fadeOut, fadeIn2, fadeOut2, fromRight,toRight ;
-    String fileName;
     String filePath;
 
     @Override
@@ -61,7 +55,6 @@ public class Activity_Folder_PDF extends AppCompatActivity{
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("Saved Pdf Files");
-
 
         renamelayoutPdf = findViewById(R.id.renamelayoutPdf);
         deleteLayoutPdf = findViewById(R.id.deletePdf);
@@ -262,7 +255,6 @@ public class Activity_Folder_PDF extends AppCompatActivity{
             final ImageButton shareMenu = view.findViewById(R.id.shareButtonMenu);;
             final View MenuOptionsBg = view.findViewById(R.id.MenuOptionsBgText);
 
-
             pdf_file_but.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -278,9 +270,6 @@ public class Activity_Folder_PDF extends AppCompatActivity{
                     }
                 }
             });
-
-
-
 
             showMenuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -429,16 +418,10 @@ public class Activity_Folder_PDF extends AppCompatActivity{
 
                 }
             });
-
-
-
             return view;
         }
 
     }
-
-
-
 
 
     private void saveToPdfFilePdf() {
@@ -448,7 +431,6 @@ public class Activity_Folder_PDF extends AppCompatActivity{
             renamefrom.renameTo(renameto);
             filenames.set(renameSelected,renameas + ".pdf");
         }
-
     }
 
     private void renameUI(){
@@ -498,51 +480,3 @@ public class Activity_Folder_PDF extends AppCompatActivity{
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    public void showMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(this, v);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.dropdown_options);
-        popupMenu.show();
-
-    }
-
-    @Override
-    public boolean onMenuItemClick(MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
-            case R.id.rename:
-
-                break;
-
-            case R.id.delete:
-
-
-                break;
-
-
-            case R.id.share:
-                finish();
-
-                break;
-
-        }
-
-        return true;
-    }
-    }
-*/

@@ -92,8 +92,8 @@
         android:layout_height="0dp"
         android:background="@color/white"
         android:fontFamily="@font/times_new_roman"
-        android:inputType="textMultiLine|textNoSuggestions"
         android:gravity="start"
+        android:inputType="textMultiLine|textNoSuggestions"
         android:padding="15dp"
         android:textColor="@color/ColourBlack"
         android:textColorHint="@color/darkGrey"
@@ -141,7 +141,7 @@
             android:id="@+id/walkThrough_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal |center "
+            android:layout_gravity="center_horizontal|center"
             android:background="@color/transparent"
             android:fontFamily="@font/gothambold"
             android:gravity="center"
@@ -162,6 +162,18 @@
         android:background="#ccffffff"
         android:clickable="false"
         android:visibility="gone" />
+
+    <Button
+        android:id="@+id/skipButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tool_bar4" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar44"
@@ -356,614 +368,6 @@
         app:layout_constraintEnd_toEndOf="@id/imageButton4" />
 
 
-    <ImageView
-        android:id="@+id/indicator_arrow7"
-        android:layout_width="70dp"
-        android:layout_height="140dp"
-        android:rotation="90"
-        android:src="@drawable/click_here_arrow_down"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout_Font_Selector"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere1BG"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:layout_marginBottom="75dp"
-        android:background="@drawable/instruction_bg"
-        android:rotation="180"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/backgroundImageScroll"
-        app:layout_constraintRight_toRightOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/clickHere1"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/clickHere1BG"
-        app:layout_constraintLeft_toLeftOf="@id/clickHere1BG"
-        app:layout_constraintRight_toRightOf="@id/clickHere1BG"
-        app:layout_constraintTop_toTopOf="@id/clickHere1BG">
-
-        <TextView
-            android:id="@+id/click_here"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button1"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere1"
-        app:layout_constraintStart_toStartOf="@+id/clickHere1"
-        app:layout_constraintTop_toTopOf="@+id/clickHere1" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere2"
-        android:layout_width="320dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/instruction_bg"
-        android:elevation="10dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough">
-
-        <TextView
-            android:id="@+id/click_here2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button2"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere2"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere2"
-        app:layout_constraintTop_toTopOf="@+id/clickHere2" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere3BG"
-        android:layout_width="250dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:rotation="180"
-        android:visibility="gone"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough" />
-
-    <LinearLayout
-        android:id="@+id/clickHere3"
-        android:layout_width="250dp"
-        android:layout_height="130dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/clickHere3BG"
-        app:layout_constraintLeft_toLeftOf="@id/clickHere3BG"
-        app:layout_constraintRight_toRightOf="@id/clickHere3BG"
-        app:layout_constraintTop_toTopOf="@id/clickHere3BG">
-
-        <TextView
-            android:id="@+id/click_here3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button3"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere3"
-        app:layout_constraintStart_toStartOf="@+id/clickHere3"
-        app:layout_constraintTop_toTopOf="@+id/clickHere3" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere4"
-        android:layout_width="250dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough">
-
-        <TextView
-            android:id="@+id/click_here4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button4"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere4"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere4"
-        app:layout_constraintTop_toTopOf="@+id/clickHere4" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere5BG"
-        android:layout_width="300dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:rotation="180"
-        android:visibility="gone"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough" />
-
-    <LinearLayout
-        android:id="@+id/clickHere5"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/clickHere5BG"
-        app:layout_constraintLeft_toLeftOf="@id/clickHere5BG"
-        app:layout_constraintRight_toRightOf="@id/clickHere5BG"
-        app:layout_constraintTop_toTopOf="@id/clickHere5BG">
-
-        <TextView
-            android:id="@+id/click_here5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button5"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere5"
-        app:layout_constraintStart_toStartOf="@+id/clickHere5"
-        app:layout_constraintTop_toTopOf="@+id/clickHere5" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere8BG"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:rotation="180"
-        android:visibility="gone"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough" />
-
-    <LinearLayout
-        android:id="@+id/clickHere8"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/clickHere8BG"
-        app:layout_constraintLeft_toLeftOf="@id/clickHere8BG"
-        app:layout_constraintRight_toRightOf="@id/clickHere8BG"
-        app:layout_constraintTop_toTopOf="@id/clickHere8BG">
-
-        <TextView
-            android:id="@+id/click_here8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button6"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere8"
-        app:layout_constraintStart_toStartOf="@+id/clickHere8"
-        app:layout_constraintTop_toTopOf="@+id/clickHere8" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere7"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough">
-
-        <TextView
-            android:id="@+id/click_here7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button7"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere7"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere7"
-        app:layout_constraintTop_toTopOf="@+id/clickHere7" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere9"
-        android:layout_width="300dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough">
-
-        <TextView
-            android:id="@+id/click_here9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button8"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere9"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere9"
-        app:layout_constraintTop_toTopOf="@+id/clickHere9" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere10BG"
-        android:layout_width="300dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:rotation="180"
-        android:visibility="gone"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough" />
-
-    <LinearLayout
-        android:id="@+id/clickHere10"
-        android:layout_width="300dp"
-        android:layout_height="160dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/clickHere10BG"
-        app:layout_constraintLeft_toLeftOf="@id/clickHere10BG"
-        app:layout_constraintRight_toRightOf="@id/clickHere10BG"
-        app:layout_constraintTop_toTopOf="@id/clickHere10BG">
-
-        <TextView
-            android:id="@+id/click_here10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button9"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere10"
-        app:layout_constraintStart_toStartOf="@+id/clickHere10"
-        app:layout_constraintTop_toTopOf="@+id/clickHere10" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere11"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/instruction_bg"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewWalkthrough">
-
-        <TextView
-            android:id="@+id/click_here11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click Here"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button10"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere11"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere11"
-        app:layout_constraintTop_toTopOf="@+id/clickHere11" />
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarcaptured"
         android:layout_width="0dp"
@@ -1023,60 +427,6 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/Pick_Image_from_gallery"
         app:layout_constraintStart_toStartOf="@+id/Pick_Image_from_gallery" />
-
-
-    <LinearLayout
-        android:id="@+id/clickHere6"
-        android:layout_width="300dp"
-        android:layout_height="130dp"
-        android:background="@drawable/instruction_bg"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/Pick_Image_from_gallery"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/Pick_Image_from_gallery">
-
-        <TextView
-            android:id="@+id/click_here6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="1dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothambold"
-            android:gravity="center"
-            android:text="Click on Tick"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <TextView
-            android:id="@+id/to_Open_Menu6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginRight="10dp"
-            android:background="@color/transparent"
-            android:fontFamily="@font/gothammedium"
-            android:gravity="center"
-            android:lineSpacingExtra="5dp"
-            android:text="@string/button11"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/textBgDot6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/circle_outline2"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/clickHere6"
-        app:layout_constraintEnd_toEndOf="@+id/clickHere6"
-        app:layout_constraintTop_toTopOf="@+id/clickHere6" />
 
     <ImageButton
         android:id="@+id/backGround_Wallpaper_close_Button"
@@ -1542,7 +892,7 @@
                         android:fontFamily="@font/hwfonts16"
                         android:text="handwriting 16"
                         android:textColor="@color/white"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"/>
 
                     <Button
                         android:id="@+id/handWritingFont17"
@@ -2144,150 +1494,178 @@
         android:background="#B3000000"
         android:orientation="vertical"
         android:paddingTop="5dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/tool_bar44"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/marginButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/transparent"
-                android:fontFamily="@font/raleway_semibold"
-                android:gravity="start |center_vertical"
-                android:paddingLeft="20dp"
-                android:text="Draw top Margin"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/circle_selected"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/circle_1"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton" />
-
-            <ImageView
-                android:id="@+id/circle_selected2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/circle_2"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton" />
-
-            <ImageView
-                android:id="@+id/circle_unselected"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/white_circle_outline"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp">
 
             <Button
-                android:id="@+id/marginButton2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_height="35dp"
                 android:background="@color/transparent"
+                android:clickable="false"
                 android:fontFamily="@font/raleway_semibold"
-                android:gravity="start |center_vertical"
-                android:paddingLeft="20dp"
-                android:text="Draw side Margin"
+                android:text="Draw Margin"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp" />
 
-            <ImageView
-                android:id="@+id/circle_selected21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/circle_1"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton2" />
+        </LinearLayout>
 
-            <ImageView
-                android:id="@+id/circle_selected22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/circle_2"
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/circle_unselected2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:src="@drawable/white_circle_outline"
-                app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/marginButton2" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/marginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="Top Margin"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/circle_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/circle_1"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton" />
+
+                <ImageView
+                    android:id="@+id/circle_selected2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/circle_2"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton" />
+
+                <ImageView
+                    android:id="@+id/circle_unselected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/white_circle_outline"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/marginButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="Side Margin"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/circle_selected21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/circle_1"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton2" />
+
+                <ImageView
+                    android:id="@+id/circle_selected22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/circle_2"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton2" />
+
+                <ImageView
+                    android:id="@+id/circle_unselected2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/white_circle_outline"
+                    app:layout_constraintBottom_toBottomOf="@+id/marginButton2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/marginButton2" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/drawLineButton"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/lineButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:background="@color/transparent"
                 android:fontFamily="@font/raleway_semibold"
-                android:gravity="start|center_vertical"
                 android:paddingLeft="20dp"
                 android:text="Draw lines"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="18dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@id/circle_selected3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <ImageView
                 android:id="@+id/circle_selected3"
@@ -2298,8 +1676,9 @@
                 android:src="@drawable/circle_1"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/lineButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/lineButton" />
+                app:layout_constraintStart_toEndOf="@id/lineButton"
+                app:layout_constraintTop_toTopOf="@+id/lineButton"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <ImageView
                 android:id="@+id/circle_selected23"
@@ -2309,9 +1688,10 @@
                 android:paddingRight="20dp"
                 android:src="@drawable/circle_2"
                 android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="@+id/lineButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/lineButton" />
+                app:layout_constraintTop_toTopOf="@id/circle_selected3"
+                app:layout_constraintBottom_toBottomOf="@id/circle_selected3"
+                app:layout_constraintLeft_toLeftOf="@id/circle_selected3"
+                app:layout_constraintRight_toRightOf="@id/circle_selected3"/>
 
             <ImageView
                 android:id="@+id/circle_unselected3"
@@ -2320,9 +1700,10 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:src="@drawable/white_circle_outline"
-                app:layout_constraintBottom_toBottomOf="@+id/lineButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/lineButton" />
+                app:layout_constraintTop_toTopOf="@id/circle_selected3"
+                app:layout_constraintBottom_toBottomOf="@id/circle_selected3"
+                app:layout_constraintLeft_toLeftOf="@id/circle_selected3"
+                app:layout_constraintRight_toRightOf="@id/circle_selected3" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -2443,50 +1824,6 @@
 
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/indicator_arrow8"
-        android:layout_width="70dp"
-        android:layout_height="140dp"
-        android:rotation="90"
-        android:src="@drawable/click_here_arrow_down"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/backgroundImageScroll"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <ImageView
-        android:id="@+id/indicator_arrow9"
-        android:layout_width="70dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="15dp"
-        android:rotation="270"
-        android:src="@drawable/click_here_arrow_down"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backgroundImageScroll" />
-
-    <ImageView
-        android:id="@+id/indicator_arrow10"
-        android:layout_width="70dp"
-        android:layout_height="140dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="10dp"
-        android:rotation="90"
-        android:src="@drawable/click_here_arrow_down"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/text_colour_ScrollView"
-        app:layout_constraintEnd_toEndOf="@+id/textCaptureButton"
-        app:layout_constraintStart_toStartOf="@id/textCaptureButton" />
-
-    <ImageView
-        android:id="@+id/indicator_arrow11"
-        android:layout_width="70dp"
-        android:layout_height="140dp"
-        android:rotation="90"
-        android:src="@drawable/click_here_arrow_down"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/tool_bar44"
-        app:layout_constraintStart_toStartOf="@+id/backgroundImageScroll" />
 
 
     <Button

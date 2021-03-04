@@ -87,15 +87,12 @@ public class MainActivity extends AppCompatActivity {
 
         fromBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.from_bottom_anim);
         toBottom = AnimationUtils.loadAnimation(MainActivity.this, R.anim.to_bottom_anim);
-
         fromBottomOG = AnimationUtils.loadAnimation(MainActivity.this, R.anim.from_bottom_original_size);
         fadein = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein);
         fadeinSlow = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadein_slow);
         fadeOut = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadeout);
         fadeOutSlow = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fadeout_slow);
-
         fromRight = AnimationUtils.loadAnimation(MainActivity.this, R.anim.enter_from_right);
-
         rotateOpen = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate_open_anim);
         rotateClose = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate_close_anim);
 
@@ -108,12 +105,8 @@ public class MainActivity extends AppCompatActivity {
         mActionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
         toolBar.setTitleTextColor(getResources().getColor(R.color.white));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
-
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.tutorials, R.id.rate_us, R.id.contact_us, R.id.feedback, R.id.about_us, R.id.follow)
                 .setDrawerLayout(drawer)
@@ -121,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         final NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
 
         appUpdateManager = AppUpdateManagerFactory.create(this);
         appUpdateManager.getAppUpdateInfo().addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
